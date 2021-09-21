@@ -34,7 +34,7 @@ def display_help():
 
 #Function used to mesure wait time.
 def time_thread(sleep_time):
-    time.sleep(sleep_time +1)
+    time.sleep(sleep_time)
 
 def main(test_time, num_threads):
 
