@@ -11,6 +11,7 @@ class cpu_benchmark(threading.Thread):
         threading.Thread.__init__(self)
         self.operation_type=operation_type
         self.terminate = True
+        self.number_of_operations = 0
 
     def set_terminate_flag(self, flag):
         self.terminate = flag
@@ -19,15 +20,17 @@ class cpu_benchmark(threading.Thread):
         return self.number_of_operations
 
     def run(self):
+        f=0.0
+        i=0
         if self.operation_type:
-            self.number_of_operations = 0.0
             while self.terminate:
-                self.number_of_operations +=1.0
+                f +=1.0
+            self.number_of_operations = f
         else:
-            self.number_of_operations = 0
             while self.terminate:
-                self.number_of_operations +=1
-
+                i +=1
+            self.number_of_operations = i
+        
 #Display usage for this script
 def display_help():
     print("\nusage: cpu_benchmark.py sample_time number_of_threads\n")
@@ -61,11 +64,11 @@ def main(test_time, num_threads):
         for t in thread_list:
             t.set_terminate_flag(False)
 
+        time.sleep(2)
         #Get the number of operations and calculate FLOPS
         for t in thread_list:
             flops.append(t.get_number_operations() // int(test_time))
 
-        
         #Calculating IOPS:
 
         thread_list = []
@@ -86,6 +89,7 @@ def main(test_time, num_threads):
             t.set_terminate_flag(False)
 
         #Get the number of operations and calculate IOPS
+        time.sleep(2)
         for t in thread_list:
             iops.append(t.get_number_operations() // int(test_time))
 
