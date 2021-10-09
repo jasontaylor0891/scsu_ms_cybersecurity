@@ -7,6 +7,7 @@ import statistics
 
 class cpu_benchmark(threading.Thread):
 
+    #init method to set default variables
     def __init__(self, operation_type):
 
         threading.Thread.__init__(self)
@@ -15,12 +16,15 @@ class cpu_benchmark(threading.Thread):
         self.terminate = True
         self.number_of_operations = 0
 
+    #Method to set the terminate flag
     def set_terminate_flag(self, flag):
         self.terminate = flag
 
+    #Method to return the number of operations
     def get_number_operations(self):
         return self.number_of_operations
 
+    #Method to calculate the number of floting-point or integer operations
     def run(self):
         f=0.0
         i=0
@@ -45,14 +49,12 @@ def display_help():
 def time_thread(sleep_time):
     time.sleep(sleep_time)
 
+#Main Function
 def main(test_time, num_threads):
 
-    #flops = []
-    #iops = []
     sum_flops = []
     sum_iops = []
-    ff = []
-    ii = []
+    
     for _ in range(3):
         
         #Calculating FLOPS:
@@ -79,15 +81,15 @@ def main(test_time, num_threads):
 
         end_time = time.time()
         total_time = (end_time - start_time)
-        print("--- %s seconds ---" % (end_time - start_time))
  
         #Get the number of operations and calculate FLOPS
         time.sleep(1)
         for t in thread_list:
             flops.append(t.get_number_operations() // int(total_time))
 
+        #Append the summed floting-point operations per second to the sum_flops list
         sum_flops.append(sum(flops))
-        ff.append(flops)
+
         #Calculating IOPS:
 
         thread_list = []
@@ -112,30 +114,29 @@ def main(test_time, num_threads):
 
         end_time = time.time()
         total_time = (end_time - start_time)
-        print("--- %s seconds ---" % (end_time - start_time))
 
         #Get the number of operations and calculate IOPS
         time.sleep(1)
         for t in thread_list:
             iops.append(t.get_number_operations() // int(total_time))
+        
+        #Append the summed interger operations per second to the sum_iops list
         sum_iops.append(sum(iops))
-        ii.append(iops)
 
+    #Display output from the test runs
     print("##############################################")
     print(f"# Test time (seconds): {test_time}")
     print(f"# Number of threads  : {num_threads}")
     print("##############################################")
-    #print(f"Output flops list: {ff}")
-    #print(f"Output iops list : {ii}")
 
-    #print(f"sum flops list: {sum_flops}")
-    #print(f"sum iops list : {sum_iops}")
+    flops_mean=statistics.mean(sum_flops)
+    iops_mean=statistics.mean(sum_iops)
 
-    print(f"Giga FLOPS: {sum(sum_flops) / 1000000000}")
-    print(f"Giga IOPS : {sum(sum_iops) / 1000000000}")
+    print(f"Giga FLOPS: {flops_mean / 1000000000}")
+    print(f"Giga IOPS : {iops_mean / 1000000000}")
 
-    print(f"Mean flops: {statistics.mean(sum_flops)}")
-    print(f"Mean iops : {statistics.mean(sum_iops)}")
+    print(f"Mean flops: {flops_mean}")
+    print(f"Mean iops : {iops_mean}")
 
     print(f"Standard deviation flops: {statistics.stdev(sum_flops)}")
     print(f"Standard deviation iops : {statistics.stdev(sum_iops)}")
