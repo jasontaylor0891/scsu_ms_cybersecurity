@@ -21,6 +21,7 @@ class config:
     download="DOWNLOAD"
     serverConfig="server.config"
     clientConfig="client.config"
+    uploadPath="UPATH"
     
     def __init__(self):
         pass
@@ -41,14 +42,15 @@ class config:
         except:
             print(Exception.message())
      
-          
+    #JT Updated client config to get the upload path from the client.config file.      
     def readClientConfig(self):
         '''
-        This function read client configuration file, return four values
+        This function read client configuration file, return file values
         @return: serverName
         @return: serverPort
         @return: clientPort
         @return: downloadPath
+        @return: uploadPath
         '''
         try:
             with open(self.clientConfig,'r') as f:
@@ -56,6 +58,8 @@ class config:
                 serName=""
                 clientPort=0
                 downPath=""
+                upPath=""
+
                 for l in f:
                     sub=l.strip().split("=")
                     if(sub[0]==self.server_port):
@@ -65,10 +69,12 @@ class config:
                     elif(sub[0]==self.client_port):
                         clientPort=sub[1]   
                     elif(sub[0]==self.download):
-                        downPath=sub[1]     
+                        downPath=sub[1]   
+                    elif(sub[0]==self.uploadPath):
+                        upPath=sub[1]  
                     else:
                         pass  
-                return serName, serPort, clientPort, downPath  
+                return serName, serPort, clientPort, downPath, upPath  
         except:
             print(Exception.message())
      

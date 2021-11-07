@@ -14,10 +14,12 @@ Err
 '''
 
 #defines the protocol header
+#JT Added protocol header for upload
 HEAD_LIST='LST'
 HEAD_REQUEST='REQ'
 HEAD_DOWNLOAD='DLD'
 HEAD_FILE='FIL'
+HEAD_UPLOAD='ULD'
 HEAD_ERROR='ERR'
 
 # we prepare the message that are sent between server and client as the header + content

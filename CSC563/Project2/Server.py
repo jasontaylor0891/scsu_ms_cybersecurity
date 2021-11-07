@@ -29,8 +29,25 @@ class server:
         while (l):
             serverSocket.send(l)
             l = f.read(1024)
+        print(fileName+" has been sent to client!")
+
+    #JT Function to recive file from client
+    def receiveFile(self,serverSocket,fileName):
+        with open(fileName, 'wb') as f:
+            while True:
+                #print('receiving data...')
+                data = serverSocket.recv(1024)
+                #print('data=%s', (data))
+                if not data:
+                     break
+            # write data to a file
+                f.write(data)
+        print(fileName+" has been uploaded!")
+        
+
 
     # Main function of server, start the file sharing service
+    #JT - Added section to upload file to server.
     def start(self):
         serverPort=self.port
         serverSocket=socket(AF_INET,SOCK_STREAM)
@@ -46,6 +63,8 @@ class server:
                 self.listFile(connectionSocket)
             elif(header==protocol.HEAD_DOWNLOAD):
                 self.sendFile(connectionSocket, self.path+"/"+msg)
+            elif(header==protocol.HEAD_UPLOAD):
+                self.receiveFile(connectionSocket, self.path+"/"+msg)
             else:
                 connectionSocket.send(protocol.prepareMsg(protocol.HEAD_ERROR, "Invalid Message"))
             connectionSocket.close()
