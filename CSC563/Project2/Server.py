@@ -12,7 +12,7 @@ class server:
     # Constructor: load the server information from config file
     def __init__(self):
         self.port, self.path=config.config().readServerConfig()
-        print(f"{self.path}")
+        #print(f"{self.path}")
 
     # Get the file names from shared directory
     def getFileList(self):

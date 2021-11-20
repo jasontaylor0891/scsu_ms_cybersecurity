@@ -14,6 +14,7 @@ DOWNLOAD=PATH_OF_CLIENT_DOWNLOAD_DIRECTORY
 '''
 class config:
     #define header
+    #JT - Added upload path to config.
     server_port='SERVER_PORT'
     path="PATH"
     server="SERVER"

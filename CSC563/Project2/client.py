@@ -125,7 +125,7 @@ class client:
         mySocket=self.connect()
         mySocket.send(protocol.prepareMsg(protocol.HEAD_DOWNLOAD, fileName))
         with open(self.downloadPath+"/"+fileName, 'wb') as f:
-            print ('file opened')
+            #print ('file opened')
             while True:
                 #print('receiving data...')
                 data = mySocket.recv(1024)
@@ -143,9 +143,9 @@ class client:
     def uploadFile(self,fileName):
         mySocket=self.connect()
         mySocket.send(protocol.prepareMsg(protocol.HEAD_UPLOAD, fileName))
-        #JT Without the sleep here the message that us sent to the server is the
+        #JT Without the sleep here the message that was sent to the server was the
         #JT filename and the content of the file.  On the server side the file that
-        #JT is created would look similar to upload2.txthello world 2?test file?
+        #JT was created would look similar to upload2.txthello world 2?test file?
         time.sleep(1)
         f = open(self.uploadPath+"/"+fileName,'rb')
         l = f.read(1024) # each time we only send 1024 bytes of data
