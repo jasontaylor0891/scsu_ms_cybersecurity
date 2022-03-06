@@ -1,0 +1,14 @@
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+
+  a[href$=".pdf"] {
+    background: url(/images/pdf_icon.png) no-repeat left center;
+    padding-left: 20px;
+  }
+  

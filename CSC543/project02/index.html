@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="CSS/project02.css">
+    <title>CSC543 Project02</title>
+
+
+</head>
+<body>
+    <div class="container-fluid" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <div class="row m-1">
+            <div class="col-sm-1">
+                <img id="myImg" src="images/me.jpeg" class="rounded-circle" alt="Jason Taylor" width="50" height="50" data-bs-toggle="modal" data-bs-target="#myModal">
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                
+                
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-4 ms-auto">
+                                    <img src="images/me.jpeg" class="rounded" alt="Jason Taylor" width="300" height="350">
+                                </div>
+                                <div class="col-sm-8 ms-auto">
+                                   <h2>Personal Recommendations:</h2>
+                                   <h3>Links:</h3>
+        
+                                    <ul>
+                                        <li><a href="https://devops.com/" target="_blank">DevOps.com</a></li>
+                                        <li><a href="https://dzone.com/devops-tutorials-tools-news" target="_blank">DevOps Zone</a></li>
+                                        <li><a href="https://medium.com/tag/devops" target="_blank">Medium.com - DevOps</a></li>
+                                        <li><a href="https://solana.com/" target="_blank">Solana</a></li>
+                                        <li><a href="https://ethereum.org/en/whitepaper/" target="_blank">Ethereum Whitepaper</a></li>
+                                        <li><a href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq" target="_blank">NFTs Explained</a></li>
+                                        <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML Tutorial</a></li>
+                                        <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS Tutorial</a></li>
+                                        <li><a href="docs/css-cheat-sheet.pdf" target="_blank">CSS Cheat Sheet</a></li>
+                                        
+                                
+                                    </ul>
+                                
+                                    <h3>Books</h3>
+                                    <ul>
+                                        <li><a href="https://www.amazon.com/dp/1789954118/" target="_blank">Learn Ethereum</a></li>
+                                        <li><a href="docs/Python_Basics.pdf" target="_blank">Python Basics</a></li>
+                                        <li><a href="docs/Introduction_To_Cybersecurity.pdf" target="_blank">Intro to Cybersecurity</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-11">
+                <h1>Jason Taylor - Personal Website</h1>
+            </div>
+
+        </div>
+        <div class="row m-1 p-1">
+            <div class="col">
+                <!-- Carousel -->
+                <div id="mytrip" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#mytrip" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#mytrip" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#mytrip" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#mytrip" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#mytrip" data-bs-slide-to="4"></button>
+                    </div>
+                
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/IMG_1276.JPG" alt="Lake Powell Utah" class="d-block w-100">
+                            <div class="carousel-caption text-end">
+                                <h3>Lake Powell Utah</h3>
+                                <p>Lake Powell at sunrise.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/IMG_1763.JPG" alt="Grand Canyon - National Park" class="d-block w-100">
+                            <div class="carousel-caption text-end">
+                                <h3>Grand Canyon - National Park</h3>
+                                <p>We had such a great time here.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/IMG_1904.JPG" alt="Grand Canyon - National Park" class="d-block w-100">
+                            <div class="carousel-caption text-end">
+                                <h3>Grand Canyon - National Park</h3>
+                                <p>Grand Canyon at sunset.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/IMG_2396.JPG" alt="Petrified Forest - National Park" class="d-block w-100">
+                            <div class="carousel-caption text-end">
+                                <h3>Petrified Forest - National Park</h3>
+                                <p>We had such a great time here.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/IMG_2785.JPG" alt="Sedona Arizona" class="d-block w-100">
+                            <div class="carousel-caption text-end">
+                                <h3>Sedona Arizona</h3>
+                                <p>We had such a great time here.</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mytrip" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#mytrip" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col">
+                <section >
+                    <h3>Background Section:</h3>
+                    <ul>
+                        <li>Jason Taylor</li>
+                        <li>1234 Main St North Branford, CT 06471</li>
+                        <li>203-555-5555</li>
+                        <li><a href="mailto:taylorj13@southernct.edu">taylorj13@southernct.edu</a></li>
+                        <li><a href="https://www.linkedin.com/in/jasontaylor0891" target="_blank"> Linkedin Profile</a></li>
+                        <li><a href="https://github.com/jasontaylor0891/" target="_blank">Github</a></li>
+                    </ul>
+            
+                </section>
+            </div>
+
+        </div>
+
+        <div class="row m-1">
+            <div class="col">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-bs-toggle="tab" href="#home">Education Background</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#menu1">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="tab" href="#menu2">Work Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#menu3">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#menu4">Hobbies</a>
+                    </li>
+                  </ul>
+                  
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div class="tab-pane container active m-2 p-2" id="home">
+                        <p><strong>Bachelor of Science:</strong> Computer Science, Southern Connecticute State University - New Haven, CT</p>
+                    </div>
+                    <div class="tab-pane container fade m-2 p-2" id="menu1">
+                            <p><strong>Languages:</strong> Bash/Shell, Python, PowerShell, C/C++, Visual Basic, SQL</p>
+                            <p><strong>Cloud Technologies:</strong> Oracle Cloud Infrastructure, Microsoft Azure, AWS</p>
+                            <p><strong>Database:</strong> Oracle Database 11-19c, Microsoft SQL Server, MySQL</p>
+                            <p><strong>DevOps:</strong> Ansible, Docker, Terraform, SVN, Git, Gitlab, CI/CD</p>
+                            <p><strong>Virtualization:</strong> VMware, Oracle VM, Oracle VirtualBox, Microsoft Hyper-V</p>
+                            <p><strong>Web:</strong> HTML, CSS, Bootstrap 5, Microsoft IIS, Oracle HTTP Server, Weblogic</p>
+                    </div>
+                    <div class="tab-pane container fade m-2 p-2" id="menu2">
+           
+                        <ul>
+                            <li><strong>Thycotic</strong> (Feb 2021 - Present) - DevOps Support Escalation Engineer</li>
+                            <ul>
+                                <li>Analyzed escalated customer issues and provide solutions to address their needs including debugging, troubleshooting, and owning all escalated issues until a resolution is provided.</li>
+                                <li>Proactively working with Thycotic customers to ensure their successful deployment of Thycotic’s DevOps tools and related products.</li>
+                                <li>Help Sales Engineers setup and provided support for integrations with DevOps Secrets Vault.  This includes integrations with Azure, AWS, Azure DevOps, Terraform, Ansible, Jenkins, and Kubernetes.</li>
+                                <li>Facilitate weekly standup meeting with Development and Product Management for Thycotic’s DevOps products.</li>
+                                <li>Provides support for DevOps Secrets Vault’s Rest APIs for customers and internal stakeholders using Python and PowerShell.</li>
+                            </ul>
+                            <li><strong>Oracle</strong> (July 2007 - Aug 2020 ) - Principal Member of Technical Staff</li>
+                            <ul>
+                                <li>Played a key role in migrating 1,200 EPM Cloud demo environments from Oracle On-Prem infrastructure to the Oracle Cloud Infrastructure (OCI). This included using Terraform to create the infrastructure and virtual machines, used CI/CD pipelines to run custom Ansible playbooks to configure the VMs, and used Gitlab to manage the source code.</li>
+                                <li>Migrated On-Prem Bash scripts used for lifecycle management for the EPM Cloud demo environments to Ansible playbooks. This project reduced the number of Bash scripts by 60% by taking advantage of Ansible modules were possible.</li>
+                                <li>Implemented linting and unit testing for all scripts and Ansible playbooks used in OCI and made sure all scripts and playbooks meet Oracle's coding standards.  This greatly reduced errors and improved the overall quality of the code.</li>
+                                <li>Created tools using Bash, EPM Automate, and Rest APIs that were used by sales consultants to easily manage their demo environments reducing their prep work by 50%. This included tools to load custom demo content, refresh the demo environments to a clean state, and restart services.</li>
+                                <li>Created Ansible Playbooks used by Oracle's demo operations team to manage EPM demo environments in OCI. This included task to start/stop services, upgrades, run maintenance, and to run diagnostics tests.</li>
+                                <li>Created custom Python scripts to install and maintain monthly upgrades for the EPM Chatbot. These scripts installed required files and configured Oracle's Mobile Hub and Digital Assistant and were deployed and maintained via a CI/CD pipeline.</li>
+                                <li>Project Management experience delivering cloud-based solutions using Agile development tools such as JIRA. Capture and share best-practice knowledge among teams. Communicating with remote teams leveraging confluence, slack and zoom.</li>
+                                
+                            </ul>
+                            <li><strong>Hyperion Solutions</strong> (Jan 2005 - June 2007) - Senior Software Engineer</li>
+                            <ul>
+                                <li>Managed the build infrastructure used by the demo build teams. This included nightly backup procedures for all build work, custom Bash scripts to manage VMs on a VMWare ESX server, and created a ASP.NET application to track build issues and submit work requests. </li>
+                                <li>Created custom applications and scripts with PowerShell, visual basic script, and Windows Script Host to be used by sales consultants which helped showcase the Hyperion demo environments and sell more software.</li>
+                                <li>Worked with third party hosting company to move our local demo environment to a hosted model. This included moving the demo VM to their platform, making updates to the VM to better perform within their platform, and help develop a library of demos to be used by sales consultants.</li>
+                            </ul>
+                            <li><strong>Canberra Industries</strong> (March 2000 - Dec 2004) - Software Engineer</li>
+                            <ul>
+                                <li>Developed and tested a custom application to determine the quality of Helium 3 detectors. This application was written with Visual Basic 6, which provided a rich GUI interface for data acquisition, quality assurance, and custom reporting.</li>
+                                <li>Developed, modified, and tested a custom Inline Monitoring System consisting of data acquisition/setup, reporting, and other various utilities. Implemented custom algorithms for calibration and sample assay.</li>
+                                <li>Designed, developed, and tested a custom Visual Basic 6 application which was run on a host PC and allowed a variety of maintenance functions to be performed on a Windows CE device. This application performed basic configuration of the Windows CE device, uploaded data from the Windows CE device to the host computer for additional analysis, and downloaded data from the host computer to the Windows CE device.</li>
+                            </ul>
+                            <li><strong>Packard Bioscience Company</strong> (Sep 1997 - March 2000) - Help Desk Support Specialist</li>
+                            <ul>
+                                <li>Responsible for system configuration, installation, and configuration of software applications, operating system upgrades, and migrations including: DOS, Windows NT 4.0, Windows 2000, and Windows 9X.</li>
+                                <li>Responsible for hardware and software system configuration, installation, repair, and maintenance on Microsoft networks, PC's and printers.</li>
+                            </ul>
+                            <li><strong>United States Marine Corps</strong> (1992 - 1996) - Military Police</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane container fade m-3 p-2" id="menu3">
+                        <figure>
+                            <a href="https://www.credly.com/badges/c5a208cb-8d83-40cc-be64-a77209f82a42/public_url" target="_blank"><img src="images/oracle.png" alt="Oracle Cerification Badge" width="250" height="250"> </a>
+                        </figure>
+                    </div>
+                    <div class="tab-pane container fade m-3 p-2" id="menu4">
+                        <div>
+                              
+                              <div class="container-fluid" style="padding:20px 20px;">
+                                <figure>
+                                    <img src="images/beer.jpg" alt="Hobbies - Hiking" width="300" height="200">
+                                    <figcaption>Homebrewing</figcaption>
+                                    <br><p>Homebrewing is the brewing of beer, mead, and ciders on a small scale for personal, non-commercial purposes. </p>
+                                    <a href="https://www.homebrewersassociation.org/how-to-brew/" target="_blank">More Info</a>
+                                </figure>
+                              </div>
+                              
+                              <div class="container-fluid" style="padding:20px 20px;">
+                                <figure>
+                                    <img src="images/garden.jpg" alt="Hobbies - Hiking" width="300" height="200">
+                                    <figcaption>Gardening</figcaption>
+                                    <br><p>Gardening is the practice of growing and cultivating plants as part of horticulture. In gardens, ornamental plants are often grown for their flowers, foliage, or overall appearance; useful plants, such as root vegetables, leaf vegetables, fruits, and herbs, are grown for consumption, for use as dyes, or for medicinal or cosmetic use. </p>
+                                    <a href="https://joegardener.com/blog/" target="_blank">More Info</a>
+                                </figure>
+                              </div>
+                              
+                              <div class="container-fluid" style="padding:20px 20px;">
+                                    <figure>
+                                        <img src="images/hiking.jpg" alt="Hobbies - Hiking" width="300" height="200">
+                                        <figcaption>Hiking</figcaption>
+                                        <br><p>Hiking is an outdoor activity which consists of walking in natural environments, often in mountainous or other scenic terrain. People often hike on hiking trails. It is such a popular activity that there are numerous hiking organizations worldwide.</p>
+                                        <a href="https://www.thehikinglife.com/" target="_blank">More Info</a>
+                                    </figure>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row m-1">
+            <h3>My Friends:</h3>
+            <div class="col">
+                <div class="card text-center" style="width:200px">
+                    <img class="card-img-top" src="images/friend01.png" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">Noah Jones</h4>
+                      <a href="mailto:noah.jones@abcdefg.com" class="btn btn-primary">Connect</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card text-center" style="width:200px">
+                    <img class="card-img-top" src="images/friend02.png" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">Jim Thompson</h4>
+                      <a href="mailto:jim.thompson@abcdefg.com" class="btn btn-primary">Connect</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card text-center" style="width:200px">
+                    <img class="card-img-top" src="images/friend03.png" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">Jenny Riveria</h4>
+                      <a href="mailto:jenny.riveria@abcdefg.com" class="btn btn-primary">Connect</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card text-center" style="width:200px">
+                    <img class="card-img-top" src="images/friend04.png" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">Ella Taylor</h4>
+                      <a href="mailto:ella.taylor@abcdefg.com" class="btn btn-primary">Connect</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <footer>
+                    <p>
+                        <br>Copyright &copy; 2022 Jason Taylor<br>
+                        <time>03/27/2022</time><br>
+                    </p>
+            </footer>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
